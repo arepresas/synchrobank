@@ -1,0 +1,46 @@
+name: Build-app-workflow
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    name: Build-app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'temurin'
+          # This handles caching for you, the extra cache step is not needed.
+          cache: 'maven'
+      - name: test inputs
+        run: echo ${{ github.event.inputs.env }}
+      - name: Maven Package
+        run: mvn -B clean package
+
+#  sonar:
+#    name: Sonar-cloud
+#    runs-on: ubuntu-latest
+#    needs: [ build ]
+#    steps:
+#      - uses: actions/checkout@v3
+#        with:
+#          fetch-depth: 0
+#      - name: Set up JDK
+#        uses: actions/setup-java@v3.5.1
+#        with:
+#          # Should be 21 to match the build job and pom.xml
+#          java-version: 21
+#          distribution: 'temurin'
+#          cache: 'maven'
+#      - name: SonarCloud Scan
+#        run: mvn -B clean verify -Psonar
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

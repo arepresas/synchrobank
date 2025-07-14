@@ -64,7 +64,7 @@
 		<spring-cloud-starter-bootstrap>4.3.0</spring-cloud-starter-bootstrap>
 		<spring-vault-core-config.version>3.2.0</spring-vault-core-config.version>
 		<surefire-plugin.version>3.5.3</surefire-plugin.version>
-		<testcontainers.version>1.21.2</testcontainers.version>
+		<testcontainers.version>1.21.3</testcontainers.version>
 		<tomakehurst.wiremock.version>2.27.2</tomakehurst.wiremock.version>
 		<vavr.version>0.10.6</vavr.version>
 		<io.micrometer.version>1.15.0</io.micrometer.version>

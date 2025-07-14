@@ -1,0 +1,34 @@
+services:
+
+  #  Database:
+  synchro-bank-db:
+    image: postgres:17.5-alpine
+    container_name: synchro-bank-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: synchro-bank-database
+      POSTGRES_USER: synchro-bank-admin-user
+      POSTGRES_PASSWORD: synchro-bank-admin-password
+    ports:
+      - "1032:5432"
+    volumes:
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U synchro-bank-user -d synchro-bank-database" ]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+
+  #  Liquibase:
+  synchro-bank-liquibase:
+    image: liquibase/liquibase:latest-alpine
+    container_name: synchro-bank-liquibase
+    restart: unless-stopped
+    depends_on:
+      synchro-bank-db:
+        condition: service_healthy
+    volumes:
+      - ./synchrobank.liquibase.properties:/liquibase/properties/liquibase.properties
+      - ../../infra-database/src/main/resources/db:/liquibase/changelog
+    command: --defaults-file=/liquibase/properties/liquibase.properties update

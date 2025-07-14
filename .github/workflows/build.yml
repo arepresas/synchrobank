@@ -21,8 +21,8 @@ jobs:
           cache: 'maven'
       - name: test inputs
         run: echo ${{ github.event.inputs.env }}
-      - name: Maven Package
-        run: mvn -B clean package
+      - name: 🛠 Build app
+        run: mvn -B verify -pl synchro-bank-core --also-make --update-snapshots -DskipTests
 
 #  sonar:
 #    name: Sonar-cloud

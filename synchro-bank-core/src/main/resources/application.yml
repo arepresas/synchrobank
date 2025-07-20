@@ -19,4 +19,4 @@ spring:
   liquibase:
     enabled: false
 
-job-cron-file-exec: "0 */1 * * * *"
+job-cron-notifications-exec: "0 */1 * * * *"

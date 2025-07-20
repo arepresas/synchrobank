@@ -18,3 +18,5 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   liquibase:
     enabled: false
+
+job-cron-file-exec: "0 */1 * * * *"

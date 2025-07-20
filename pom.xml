@@ -28,7 +28,7 @@
 		<jupiter.version>5.13.3</jupiter.version>
 		<kafka-avro-serializer.version>7.8.0</kafka-avro-serializer.version>
 		<kafka-schema-serializer.version>7.8.0</kafka-schema-serializer.version>
-		<liquibase.version>4.32.0</liquibase.version>
+		<liquibase.version>4.33.0</liquibase.version>
 		<logback.access.version>1.4.14</logback.access.version>
 		<logback.contrib.version>0.1.5</logback.contrib.version>
 		<logback.version>1.5.18</logback.version>

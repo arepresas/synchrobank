@@ -41,7 +41,7 @@
 		<maven.compiler.version>3.14.0</maven.compiler.version>
 		<maven-failsafe-plugin.version>3.5.3</maven-failsafe-plugin.version>
 		<microcks-testcontainers.version>0.3.1</microcks-testcontainers.version>
-		<mockito.version>5.18.0</mockito.version>
+		<mockito.version>5.19.0</mockito.version>
 		<openfeature.version>1.16.0</openfeature.version>
 		<postgresql.version>42.7.7</postgresql.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

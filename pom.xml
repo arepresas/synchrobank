@@ -33,7 +33,7 @@
 		<logback.contrib.version>0.1.5</logback.contrib.version>
 		<logback.version>1.5.18</logback.version>
 		<logstash-logback-encoder.version>8.1</logstash-logback-encoder.version>
-		<lombok.version>1.18.38</lombok.version>
+		<lombok.version>1.18.40</lombok.version>
 		<mapstruct.version>1.6.3</mapstruct.version>
 		<maven.compiler.release>21</maven.compiler.release>
 		<maven.compiler.source>21</maven.compiler.source>

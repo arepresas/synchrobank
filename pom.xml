@@ -43,7 +43,7 @@
 		<microcks-testcontainers.version>0.3.1</microcks-testcontainers.version>
 		<mockito.version>5.19.0</mockito.version>
 		<openfeature.version>1.17.0</openfeature.version>
-		<postgresql.version>42.7.7</postgresql.version>
+		<postgresql.version>42.7.8</postgresql.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sonar.coverage.exclusions>**/config/**/*.java,**/*Fragment.java,**/model/**/*.java,**/mock/**/*.java,**/properties/**/*.java,**/rest/resources/**/*.java</sonar.coverage.exclusions>
